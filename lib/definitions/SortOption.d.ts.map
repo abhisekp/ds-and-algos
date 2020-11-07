@@ -1,0 +1,1 @@
+{"version":3,"file":"SortOption.d.ts","sourceRoot":"","sources":["../../src/definitions/SortOption.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,KAAK;;;CAGR,CAAC;AACX,oBAAY,KAAK,GAAG,OAAO,KAAK,CAAC,MAAM,OAAO,KAAK,CAAC,CAAC;AAErD,MAAM,WAAW,UAAU;IACzB,KAAK,EAAE,KAAK,CAAC;IACb,CAAC,GAAG,EAAE,MAAM,GAAG,GAAG,CAAC;CACpB"}

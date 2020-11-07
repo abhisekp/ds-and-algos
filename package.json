@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prebuild": "yarn clean",
     "clean": "rimraf lib/*",
     "format": "prettier-eslint --write \"src/**/*.ts\"",
     "test": "jest"

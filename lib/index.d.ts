@@ -1,2 +1,2 @@
-export * from "./bubbleSort";
+export * from "./algos/sorting/bubbleSort";
 //# sourceMappingURL=index.d.ts.map
