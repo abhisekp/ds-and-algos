@@ -10,3 +10,5 @@ node_js:
   - 13
   - 14
   - 15
+before_install:
+  - yarn config set ignore-engines true
