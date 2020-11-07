@@ -34,20 +34,3 @@ export function bubbleSort(unsortedArr: number[]) {
   }
   return unsortedArr;
 }
-
-/*
-function runTest(test) {
-  const unsortedArr = test[0];
-  const expectedSortedArr = test[1];
-  console.log(unsortedArr.join(", "), `<--- [${unsortedArr.length}]`);
-  const sortedArr = bubbleSort(Array.from(unsortedArr));
-  console.log(sortedArr.join(", "), "<---");
-
-  expect(sortedArr).to.deep.equal(expectedSortedArr);
-}
-
-tests.forEach(test => {
-  runTest(test);
-  console.log("-".repeat(40));
-});
- */

@@ -19,6 +19,10 @@ describe.each<TestTuple>([
   [
     [81, -2, 99, -763, 57, 3, 4, 9, 70],
     [-763, -2, 3, 4, 9, 57, 70, 81, 99]
+  ],
+  [
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   ]
 ])("bubbleSort(%p)", (unsortedArr, expectedSortedArr) => {
   test(`returns [${expectedSortedArr.join(", ")}]`, () => {

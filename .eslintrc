@@ -3,5 +3,9 @@
   "extends": ["airbnb-typescript"],
   "parserOptions": {
     "project": "./tsconfig.json"
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "only-multiline"]
   }
 }
