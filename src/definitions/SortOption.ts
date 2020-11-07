@@ -5,6 +5,7 @@ export const Order = {
 export type Order = typeof Order[keyof typeof Order];
 
 export interface SortOption {
-  order: Order;
+  order?: Order;
+  optimize?: boolean;
   [key: string]: any;
 }

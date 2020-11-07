@@ -1,9 +1,13 @@
+import { SortOption } from '../../definitions/SortOption';
 import { dAlgo } from "../../utils/logger";
 import { swapIdx } from "../../utils/swapIdx";
 
 const d = dAlgo.extend("bubbleSort");
 
-export function bubbleSort(unsortedArr: number[]) {
+export function bubbleSort(unsortedArr: number[], options?: SortOption) {
+  if (options) {
+    d("Sort Options %O", options);
+  }
   d("Unsorted %o", unsortedArr);
   let swapCount = 0;
   for (let i = unsortedArr.length - 1, count = 1; i >= 0; i -= 1) {
@@ -24,8 +28,8 @@ export function bubbleSort(unsortedArr: number[]) {
       d(`Pass %d (complete): %o`, count++, unsortedArr);
     }
     d("*".repeat(3));
-    if (!isUnsorted) {
-      d("Optimized exit");
+    if (options?.optimize && !isUnsorted) {
+      d("➥➥➥ Optimized exit");
       break;
     }
   }

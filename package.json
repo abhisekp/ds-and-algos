@@ -22,6 +22,7 @@
     "prebuild": "yarn clean",
     "clean": "rimraf lib/*",
     "format": "prettier-eslint --write \"src/**/*.ts\"",
+    "test:dev": "jest src/",
     "test": "jest"
   },
   "dependencies": {

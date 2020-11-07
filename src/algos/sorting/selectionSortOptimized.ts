@@ -4,10 +4,7 @@ import { SortOption } from "../../definitions/SortOption";
 
 const d = dAlgo.extend("selectionSort");
 
-export function selectionSort(
-  unsortedArr: number[],
-  options: SortOption = {} as SortOption
-) {
+export function selectionSort(unsortedArr: number[], options?: SortOption) {
   d("Unsorted %o", unsortedArr);
   let swapCount = 0;
   for (let i = 0; i < unsortedArr.length; i += 1) {

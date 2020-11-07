@@ -7,6 +7,10 @@ type TestTuple = [NumberArray, NumberArray];
 
 describe.each<TestTuple>(unsortedSorted)("Sorting Algorithms", (unsortedArr, expectedSortedArr) => {
   describe("Bubble Sort", () => {
+    test(`bubbleSort(${unsortedArr}) [optimized] should return ${expectedSortedArr}`, () => {
+      expect(bubbleSort(Array.from(unsortedArr), { optimize: true })).toEqual(expectedSortedArr);
+    });
+
     test(`bubbleSort(${unsortedArr}) should return ${expectedSortedArr}`, () => {
       expect(bubbleSort(Array.from(unsortedArr))).toEqual(expectedSortedArr);
     });
