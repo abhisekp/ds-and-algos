@@ -21,7 +21,7 @@ describe.each<TestTuple>([
     [-763, -2, 3, 4, 9, 57, 70, 81, 99]
   ]
 ])("bubbleSort(%p)", (unsortedArr, expectedSortedArr) => {
-  test(`returns [${expectedSortedArr.join(', ')}]`, () => {
+  test(`returns [${expectedSortedArr.join(", ")}]`, () => {
     expect(bubbleSort(Array.from(unsortedArr))).toEqual(expectedSortedArr);
   });
 });

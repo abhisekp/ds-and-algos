@@ -1,4 +1,4 @@
-import { dAlgo } from './logger'
+import { dAlgo } from "./logger";
 
 const d = dAlgo.extend("bubbleSort");
 
@@ -15,26 +15,20 @@ export function bubbleSort(unsortedArr: number[]) {
     for (let j = 0; j < i; j++) {
       const currIdx = j;
       const nextIdx = j + 1;
-      d('currIdx: %d, nextIdx: %d', currIdx, nextIdx);
+      d("currIdx: %d, nextIdx: %d", currIdx, nextIdx);
       const curr = unsortedArr[currIdx];
       const next = unsortedArr[nextIdx];
-      d('curr: %d, next: %d', curr, next);
+      d("curr: %d, next: %d", curr, next);
       if (curr > next) {
         swapIdx(unsortedArr, currIdx, nextIdx);
-        d(
-          `Swapping indexes [%d (%d) ⟺ %d (%d)]`,
-          currIdx,
-          curr,
-          nextIdx,
-          next,
-        );
+        d(`Swapping indexes [%d (%d) ⟺ %d (%d)]`, currIdx, curr, nextIdx, next);
         unsorted = true;
       }
       d(`%d> %s`, count++, unsortedArr.join(", "));
     }
     d("*".repeat(3));
     if (!unsorted) {
-      d('Optimized exit');
+      d("Optimized exit");
       break;
     }
   }
