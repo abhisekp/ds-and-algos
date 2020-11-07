@@ -1,1 +1,1 @@
-export * from "./bubbleSort";
+export * from "./algos/sorting/bubbleSort";

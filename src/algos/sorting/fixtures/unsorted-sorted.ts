@@ -1,9 +1,7 @@
-import { bubbleSort } from "./bubbleSort";
-
 type NumberArray = number[];
 type TestTuple = [NumberArray, NumberArray];
 
-describe.each<TestTuple>([
+export const unsortedSorted: TestTuple[] = [
   [
     [7, 5, 2, 4, 3, 9],
     [2, 3, 4, 5, 7, 9]
@@ -23,9 +21,17 @@ describe.each<TestTuple>([
   [
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  ],
+  [
+    [7, 9, 1, 0, 4, 5],
+    [0, 1, 4, 5, 7, 9]
+  ],
+  [
+    [4, 6, 1, 2, 3],
+    [1, 2, 3, 4, 6]
+  ],
+  [
+    [7, 9, 1, 0, 5, 4],
+    [0, 1, 4, 5, 7, 9]
   ]
-])("bubbleSort(%p)", (unsortedArr, expectedSortedArr) => {
-  test(`returns [${expectedSortedArr.join(", ")}]`, () => {
-    expect(bubbleSort(Array.from(unsortedArr))).toEqual(expectedSortedArr);
-  });
-});
+];

@@ -1,17 +1,13 @@
-import { dAlgo } from "./logger";
+import { dAlgo } from "../../utils/logger";
+import { swapIdx } from "../../utils/swapIdx";
 
 const d = dAlgo.extend("bubbleSort");
 
-function swapIdx(arr: unknown[], i: number, j: number) {
-  const tmp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = tmp;
-  return arr;
-}
-
 export function bubbleSort(unsortedArr: number[]) {
+  d("Unsorted %o", unsortedArr);
+  let swapCount = 0;
   for (let i = unsortedArr.length - 1, count = 1; i >= 0; i -= 1) {
-    let unsorted = false;
+    let isUnsorted;
     for (let j = 0; j < i; j++) {
       const currIdx = j;
       const nextIdx = j + 1;
@@ -20,17 +16,21 @@ export function bubbleSort(unsortedArr: number[]) {
       const next = unsortedArr[nextIdx];
       d("curr: %d, next: %d", curr, next);
       if (curr > next) {
+        d(`Swapping indexes [%d (%d) ↔ %d (%d)]`, currIdx, curr, nextIdx, next);
         swapIdx(unsortedArr, currIdx, nextIdx);
-        d(`Swapping indexes [%d (%d) ⟺ %d (%d)]`, currIdx, curr, nextIdx, next);
-        unsorted = true;
+        swapCount++;
+        isUnsorted = true;
       }
-      d(`%d> %s`, count++, unsortedArr.join(", "));
+      d(`Pass %d (complete): %o`, count++, unsortedArr);
     }
     d("*".repeat(3));
-    if (!unsorted) {
+    if (!isUnsorted) {
       d("Optimized exit");
       break;
     }
   }
+  d("Total Swaps: %d", swapCount);
+  d("Sorted: %o", unsortedArr);
+  d("*".repeat(40));
   return unsortedArr;
 }

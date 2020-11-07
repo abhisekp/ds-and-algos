@@ -2,7 +2,11 @@
 
 # Table of Contents
 
-1. [**Bubble Sort (_with optimization_)**](src/bubbleSort.ts)
+1. [**Bubble Sort (_with optimization_)**](src/algos/sorting/bubbleSort.ts)  
+    > Bubble large values to end within the remaining set of values.
+
+2. [**Selection Sort**](src/algos/sorting/selectionSort.ts)
+    > Select and Push minimum values from subarrays to first
 
 # Resources
 
