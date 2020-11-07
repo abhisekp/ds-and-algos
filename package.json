@@ -1,7 +1,7 @@
 {
   "name": "ds-and-algos",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "Abhisek Pattnaik <abhisekp@engineer.com> (https://about.me/abhisekp)",
   "license": "MIT",
   "devDependencies": {
