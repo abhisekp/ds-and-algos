@@ -2,7 +2,7 @@
   "name": "ds-and-algos",
   "version": "0.0.0",
   "main": "index.js",
-  "author": "Abhisek Pattnaik <abhisekp@goniyo.com> (https://about.me/abhisekp)",
+  "author": "Abhisek Pattnaik <abhisekp@engineer.com> (https://about.me/abhisekp)",
   "license": "MIT",
   "devDependencies": {
     "@types/debug": "^4.1.5",
