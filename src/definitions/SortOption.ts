@@ -1,6 +1,6 @@
 export const Order = {
-  ASC: 'ASCENDING',
-  DESC: 'DESCENDING'
+  ASC: "ASCENDING",
+  DESC: "DESCENDING"
 } as const;
 export type Order = typeof Order[keyof typeof Order];
 

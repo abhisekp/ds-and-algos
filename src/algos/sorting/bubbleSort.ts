@@ -1,4 +1,4 @@
-import { SortOption } from '../../definitions/SortOption';
+import { SortOption } from "../../definitions/SortOption";
 import { dAlgo } from "../../utils/logger";
 import { swapIdx } from "../../utils/swapIdx";
 
