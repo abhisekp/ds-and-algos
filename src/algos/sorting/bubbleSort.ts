@@ -5,10 +5,10 @@ import { swapIdx } from "../../utils/swapIdx";
 const d = dAlgo.extend("bubbleSort");
 
 export function bubbleSort(unsortedArr: number[], options?: SortOption) {
+  d("Unsorted %o", unsortedArr);
   if (options) {
     d("Sort Options %O", options);
   }
-  d("Unsorted %o", unsortedArr);
   let swapCount = 0;
   for (let i = unsortedArr.length - 1, count = 1; i >= 0; i -= 1) {
     let isUnsorted;

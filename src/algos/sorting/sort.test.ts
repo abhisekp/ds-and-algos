@@ -1,5 +1,6 @@
 import { unsortedSorted } from "./fixtures/unsorted-sorted";
 import { bubbleSort } from "./bubbleSort";
+import { bubbleSortRecursive } from "./bubbleSortRecursive";
 import { selectionSort } from "./selectionSort";
 
 type NumberArray = number[];
@@ -18,6 +19,12 @@ describe.each<TestTuple>(unsortedSorted)(
           expectedSortedArr
         );
       });
+
+      test(`bubbleSortRecursive(${unsortedArr}) should return ${expectedSortedArr}`, () => {
+        expect(
+          bubbleSortRecursive(Array.from(unsortedArr))
+        ).toEqual(expectedSortedArr);
+      }, 10e3);
     });
 
     describe("Selection Sort", () => {

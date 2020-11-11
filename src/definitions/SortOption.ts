@@ -1,11 +1,7 @@
-export const Order = {
-  ASC: "ASCENDING",
-  DESC: "DESCENDING"
-} as const;
-export type Order = typeof Order[keyof typeof Order];
+import { SortOrder } from './SortOrder';
 
 export interface SortOption {
-  order?: Order;
+  order?: SortOrder;
   optimize?: boolean;
   [key: string]: any;
 }

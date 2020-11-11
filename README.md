@@ -12,3 +12,4 @@
 
 1. https://khan4019.github.io/front-end-Interview-Questions/sort.html
 2. https://www.geeksforgeeks.org/sorting-algorithms/
+3. Improve Selection Sort: https://www.geeksforgeeks.org/sorting-algorithm-slightly-improves-selection-sort/
